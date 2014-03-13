@@ -1,0 +1,31 @@
+{
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"menu": {
+		"pages":{
+			"Home":{
+				"Description": "This is some page",
+				"link" : "pages/index.md",
+				"template": "templates/theme/index"
+			},
+			"About":{
+				"Description": "This is some page",
+				"link" : "pages/index.md",
+				"template": "templates/theme/index"
+			}
+		},
+		"folders":{
+			"Categories":{
+				"pages":{
+					"Php":{
+						"Description": "This is some page",
+						"link" : "pages/index.md",
+						"template": "templates/theme/index"
+					}
+				}
+			}
+		}
+	}
+}

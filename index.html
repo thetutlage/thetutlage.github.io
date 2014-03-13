@@ -7,10 +7,34 @@
 
 			// Accept: application/vnd.github-blob.raw
 
-			$.get('https://api.github.com/repos/thetutlage/thetutlage.github.io/git/trees/master',function(response){
+/*			$.get('https://api.github.com/repos/thetutlage/thetutlage.github.io/git/trees/master',function(response){
 				console.log(response);
+			});*/
+
+
+			$.ajax({
+				url: 'boot.json',
+				success: function(response){
+					var pages = response.menu.pages;
+					var html = '<ul>';
+					$.each(pages,function(k,v){
+						html += '<li><a href="'+v.link+'">'+k+'</a></li>';
+					});
+					var folders = response.menu.folders;
+					$.each(folders,function(k,v){
+						html += '<li><a href="'+v.link+'">'+k+'</a><ul>';
+						$.each(v.pages,function(nk,nv){
+							html += '<li><a href="'+nv.link+'">'+nk+'</a></li>';
+						})
+						html += '</ul></li>';
+					});
+					$('body').append(html);
+				},
+				error: function(error,errorMessage){
+					console.log(errorMessage);
+				}
 			});
-		})
+		});
 	</script>
 	<body>
 	</body>
