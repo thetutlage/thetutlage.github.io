@@ -1,8 +1,17 @@
 <html>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript">
-		alert('hello');
+		$(function(){
+			// https://api.github.com/repos/thetutlage/thetutlage.github.io/git/trees/master
+			//https://api.github.com/repos/thetutlage/thetutlage.github.io/git/blobs/29931b8cb27f5f43dbda5686df0e51ca990cc7b6
+
+			// Accept: application/vnd.github-blob.raw
+
+			$.get('https://api.github.com/repos/thetutlage/thetutlage.github.io/git/trees/master',function(response){
+				console.log(response);
+			});
+		})
 	</script>
 	<body>
-		Hello world
 	</body>
 </html>
