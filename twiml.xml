@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say>Welcome to pick</Say>
+    <Say voice="woman" language="en-gb">Your verification code is 3456</Say>
+</Response>
